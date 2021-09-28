@@ -1,0 +1,36 @@
+= OneToMany example with Hibernate
+{localdatetime}
+:toc:
+:doctype: book
+:docinfo:
+
+
+== Introduction
+This is a simple example about the use of the ManyToMany annotation with Spring Data and Hibernate.
+In this example you can see an approach to generate the relation with Set.
+
+If you need more information you can take a look into: https://refactorizando.com/ejemplo-relacion-manytomany-hibernate
+
+== List and Set in a ManyToMany
+
+When you generate a relation you can work with two different approaches:
+
+  * Set: With this approach if you remove a child from the relation, it is going to make a one operation.
+  * List: If you remove a child from the relation, you are going to make several operations.
+    Instead of deleting just one element from the new table created, Hibernate removes all elements rows associated to      the given parentId and reinserts the remaining ones back afterward.
+
+== How does it work?
+
+This is a simple spring boot application so to run it:
+
+    mvn spring-boot:run
+
+== Test
+
+You can find some tests to verify different approaches.
+
+    mvn test
+
+
+
+
