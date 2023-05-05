@@ -1,13 +1,14 @@
 package com.refactorizando.example.manytomany.domain;
 
+import java.util.HashSet;
+import java.util.Set;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+
 
 @Entity
 @NoArgsConstructor
@@ -33,7 +34,7 @@ public class Department {
             joinColumns = @JoinColumn(name = "department_id"),
             inverseJoinColumns = @JoinColumn(name = "employee_id")
     )
-    private List<Employee> employees = new ArrayList<>();
+    private Set<Employee> employees = new HashSet<>();
 
     public void addEmployee(Employee employee) {
         employees.add(employee);
