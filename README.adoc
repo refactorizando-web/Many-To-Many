@@ -9,7 +9,10 @@
 This is a simple example about the use of the ManyToMany annotation with Spring Data and Hibernate.
 In this example you can see an approach to generate the relation with Set.
 
-If you need more information you can take a look into: https://refactorizando.com/ejemplo-relacion-manytomany-hibernate
+If you need more information you can take a look into: 
+
+  * Spanish: https://refactorizando.com/ejemplo-relacion-manytomany-hibernate
+  * Enlgish: https://refactorizando.com/en/many-to-many-relationship-hibernate/
 
 == List and Set in a ManyToMany
 
